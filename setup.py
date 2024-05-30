@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2014-2015 Harvard, edX & OpenCraft
+# Copyright (c) 2024 Aquent
 #
 # This software's license gives you freedom; you can copy, convey,
 # propagate, redistribute and/or modify this program under the terms of
@@ -20,19 +20,20 @@
 
 # Imports ###########################################################
 
-import os
-from setuptools import setup
-
+from setuptools import setup, find_packages
 
 # Main ##############################################################
 
 setup(
-    name='custom-form-app',
+    name='custom-reg-form',
     version='1.0',
     description='LMS - Custom Registration Extension Form',
-    packages=['custom_reg_form'],
+    packages=find_packages(),
+    include_package_data=True,
     install_requires=[
         'Django',
     ],
+    package_data={
+        'custom_reg_form': ['migrations/*.py'],
+    },
 )
-
