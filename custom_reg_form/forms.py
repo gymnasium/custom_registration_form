@@ -11,6 +11,7 @@ class ExtraInfoForm(ModelForm):
             "required": u"Please select the region nearest to you.",
             "invalid": u"Please select a valid region.",
         }
+        self.fields['market'].required = True
 
     class Meta(object):
         model = ExtraInfo
