@@ -84,6 +84,6 @@ class ExtraInfo(models.Model):
     
     class Meta:
         app_label = "custom_reg_form"
-        db_table = "custom_reg_form_extrainfo"
+        db_table = "custom_reg_form"
         verbose_name = "Extra Info"
         verbose_name_plural = "Extra Info"
