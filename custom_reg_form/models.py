@@ -13,7 +13,7 @@ class ExtraInfo(models.Model):
 
     user = models.OneToOneField(USER_MODEL, null=True, on_delete=models.CASCADE)
     MARKETS = (
-        ("10", "Not Applicable"),
+        ("NA", "Not Applicable"),
         ("36", "Australia - Melbourne"),
         ("39", "Australia - Sydney"),
         ("40", "Canada - Toronto"),
