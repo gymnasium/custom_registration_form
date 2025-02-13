@@ -73,7 +73,7 @@ class ExtraInfo(models.Model):
         ("881", "USA - Wisconsin"),
     )
     market = models.CharField(
-        verbose_name="Select Nearest Region",
+        verbose_name="Select Nearest Aquent Office",
         choices=MARKETS,
         blank=False,
         max_length=5,
