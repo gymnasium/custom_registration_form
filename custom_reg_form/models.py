@@ -86,7 +86,5 @@ class ExtraInfo(models.Model):
         app_label = "custom_reg_form"
         db_table = "custom_reg_form"
         db_table_comment = "Additional account & registration data for Open EdX students"
-        label = "Custom Registration Form"
-        label_lower = "custom registration form"
         verbose_name = "Custom Datum"
         verbose_name_plural = "Custom Data"
