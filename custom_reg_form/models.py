@@ -83,7 +83,7 @@ class ExtraInfo(models.Model):
         return f"{self.user.username} - {self.market}"
     
     class Meta:
-        app_label = "custom_reg_form"
+        app_label = "Custom Registration Form"
         db_table = "custom_reg_form"
         verbose_name = "Extra Info"
         verbose_name_plural = "Extra Info"

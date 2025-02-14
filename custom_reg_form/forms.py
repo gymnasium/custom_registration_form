@@ -7,6 +7,10 @@ class ExtraInfoForm(ModelForm):
     """
     def __init__(self, *args, **kwargs):
         super(ExtraInfoForm, self).__init__(*args, **kwargs)
+        self.fields['market'].error_messages = {
+            "required": u"Please select the Aquent office nearest to you.",
+            "invalid": u"Please select a valid Aquent office.",
+        }
 
     class Meta(object):
         model = ExtraInfo
