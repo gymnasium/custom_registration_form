@@ -11,7 +11,10 @@ class ExtraInfoForm(ModelForm):
             "required": u"Please select the Aquent office nearest to you.",
             "invalid": u"Please select a valid Aquent office.",
         }
+        self.fields['market'].required = False
 
     class Meta(object):
         model = ExtraInfo
         fields = ('market',)
+        labels = {'market': u"Select Nearest Aquent Office",}
+        help_texts = {'market': u"Please choose the Aquent office nearest to  you.",}

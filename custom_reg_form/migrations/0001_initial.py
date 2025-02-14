@@ -16,9 +16,26 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='ExtraInfo',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('market', models.CharField(blank=True, max_length=5, verbose_name=b'Select Nearest Aquent Office', choices=[(b'Not Applicable', b'NA'), (b'Boston', b'10')])),
-                ('user', models.OneToOneField(null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('id', models.AutoField(
+                    auto_created=True,
+                    primary_key=True,
+                    serialize=False,
+                    verbose_name='ID',
+                )),
+                ('market', models.CharField(
+                    blank=True,
+                    choices=[
+                        (b'Not Applicable', b'NA'),
+                        (b'Boston', b'10')
+                    ],
+                    max_length=5,
+                    verbose_name=b'Select Nearest Aquent Office',
+                )),
+                ('user', models.OneToOneField(
+                    null=True,
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to=settings.AUTH_USER_MODEL,
+                )),
             ],
         ),
     ]

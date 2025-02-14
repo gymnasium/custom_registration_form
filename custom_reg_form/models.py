@@ -73,17 +73,20 @@ class ExtraInfo(models.Model):
         ("881", "USA - Wisconsin"),
     )
     market = models.CharField(
-        verbose_name="Select Nearest Aquent Office",
-        choices=MARKETS,
         blank=False,
+        choices=MARKETS,
         max_length=5,
+        verbose_name="Select Nearest Aquent Office",
     )
 
     def __str__(self):
         return f"{self.user.username} - {self.market}"
     
     class Meta:
-        app_label = "Custom Registration Form"
+        app_label = "custom_reg_form"
         db_table = "custom_reg_form"
-        verbose_name = "Extra Info"
-        verbose_name_plural = "Extra Info"
+        db_table_comment = "Additional account & registration data for Open EdX students"
+        label = "Custom Registration Form"
+        label_lower = "custom registration form"
+        verbose_name = "Custom Datum"
+        verbose_name_plural = "Custom Data"
