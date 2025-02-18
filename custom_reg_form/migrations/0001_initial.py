@@ -23,19 +23,17 @@ class Migration(migrations.Migration):
                     verbose_name='ID',
                 )),
                 ('market', models.CharField(
-                    blank=False,
                     choices=[
                         (b'Not Applicable', b'NA'),
-                        (b'Boston', b'10')
+                        (b'Boston', b'10'),
                     ],
                     max_length=5,
                     verbose_name=b'Select Nearest Aquent Office',
                 )),
                 ('receive_job_offers', models.CharField(
-                    blank=False,
                     choices=[
                         (b'Yes', True),
-                        (b'No', False)
+                        (b'No', False),
                     ],
                     max_length=5,
                     verbose_name=b'Do you wish to receive emails for job opportunities?',
