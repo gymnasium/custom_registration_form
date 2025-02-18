@@ -26,7 +26,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='custom-reg-form',
-    version='1.0',
+    version='1.0.1',
     description='LMS - Custom Registration Extension Form',
     packages=find_packages(),
     include_package_data=True,

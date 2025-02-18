@@ -12,6 +12,7 @@ class ExtraInfo(models.Model):
     """
 
     user = models.OneToOneField(USER_MODEL, null=True, on_delete=models.CASCADE)
+
     MARKETS = (
         ("NA", "Not Applicable"),
         ("36", "Australia - Melbourne"),
@@ -73,18 +74,28 @@ class ExtraInfo(models.Model):
         ("881", "USA - Wisconsin"),
     )
     market = models.CharField(
-        blank=False,
+        blank=True,
         choices=MARKETS,
         max_length=5,
         verbose_name="Select Nearest Aquent Office",
     )
 
+    receive_job_offers = models.CharField(
+        blank=True,
+        choices=[
+            (b'Yes', True),
+            (b'No', False)
+        ],
+        max_length=5,
+        verbose_name="Do you wish to receive emails for job opportunities?",
+    ),
+
     def __str__(self):
-        return f"{self.user.username} - {self.market}"
+        return f"{self.user.username} | Market: {self.market} | Job Offers: {self.receive_job_offers}"
     
     class Meta:
         app_label = "custom_reg_form"
         db_table = "custom_reg_form"
         db_table_comment = "Additional account & registration data for Open EdX students"
-        verbose_name = "Custom Datum"
+        verbose_name = "Custom Data"
         verbose_name_plural = "Custom Data"
