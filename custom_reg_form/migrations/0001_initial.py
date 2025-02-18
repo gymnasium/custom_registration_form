@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                     verbose_name='ID',
                 )),
                 ('market', models.CharField(
-                    blank=True,
+                    blank=False,
                     choices=[
                         (b'Not Applicable', b'NA'),
                         (b'Boston', b'10')
@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
                     verbose_name=b'Select Nearest Aquent Office',
                 )),
                 ('receive_job_offers', models.CharField(
-                    blank=True,
+                    blank=False,
                     choices=[
                         (b'Yes', True),
                         (b'No', False)
