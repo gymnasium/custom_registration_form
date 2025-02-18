@@ -80,13 +80,8 @@ class ExtraInfo(models.Model):
         verbose_name="Select Nearest Aquent Office",
     )
 
-    receive_job_offers = models.CharField(
+    receive_job_offers = models.BooleanField(
         blank=True,
-        choices=(
-            (b'Yes', True),
-            (b'No', False),
-        ),
-        max_length=5,
         verbose_name="Do you wish to receive emails for job opportunities?",
     ),
 

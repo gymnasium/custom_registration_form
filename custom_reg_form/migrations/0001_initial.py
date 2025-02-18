@@ -7,6 +7,8 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
+    
+    initial = True
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
@@ -23,6 +25,7 @@ class Migration(migrations.Migration):
                     verbose_name='ID',
                 )),
                 ('market', models.CharField(
+                    Blank=False,
                     choices=[
                         (b'Not Applicable', b'NA'),
                         (b'Boston', b'10'),
@@ -30,12 +33,8 @@ class Migration(migrations.Migration):
                     max_length=5,
                     verbose_name=b'Select Nearest Aquent Office',
                 )),
-                ('receive_job_offers', models.CharField(
-                    choices=[
-                        (b'Yes', True),
-                        (b'No', False),
-                    ],
-                    max_length=5,
+                ('receive_job_offers', models.BooleanField(
+                    Blank=False,
                     verbose_name=b'Do you wish to receive emails for job opportunities?',
                 )),
                 ('user', models.OneToOneField(
