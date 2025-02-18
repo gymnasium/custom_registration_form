@@ -12,10 +12,9 @@ class ExtraInfoForm(ModelForm):
             "invalid": u"Please select a valid Aquent office.",
         }
         self.fields['market'].required = True
-        self.fields['receive_job_offers'].required = True
 
     class Meta(object):
         model = ExtraInfo
-        fields = ('market','receive_job_offers')
-        labels = {'market': u"Select Nearest Aquent Office", 'receive_job_offers': u"Do you wish to receive emails for job opportunities?" }
-        help_texts = {'market': u"Please choose the Aquent office nearest to  you.", 'receive_job_offers': u"Please choose." }
+        fields = ('market',)
+        labels = {'market': u"Select Nearest Aquent Office",}
+        help_texts = {'market': u"Please choose the Aquent office nearest to  you.",}
