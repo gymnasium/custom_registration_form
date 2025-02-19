@@ -17,4 +17,4 @@ class ExtraInfoForm(ModelForm):
         model = ExtraInfo
         fields = ('market','receive_job_offers',)
         labels = {'market': u"Select Nearest Aquent Office",}
-        help_texts = {'market': u"Please choose the Aquent office nearest to  you.",}
+        help_texts = {'market': u"Please choose the Aquent office nearest to you.",}
