@@ -101,7 +101,7 @@ class ExtraInfo(models.Model):
 
     receive_job_offers = models.BooleanField(
         blank=True,
-        Default=False,
+        default=False,
         editable=True,
         verbose_name="Receive emails with job opportunities?",
     ),
