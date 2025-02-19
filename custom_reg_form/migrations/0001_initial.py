@@ -33,6 +33,8 @@ class Migration(migrations.Migration):
                     verbose_name=b'Select Nearest Aquent Office',
                 )),
                 ('receive_job_offers', models.BooleanField(
+                    default=False,
+                    editable=True,
                     verbose_name=b'Do you wish to receive emails for job opportunities?',
                 )),
                 ('user', models.OneToOneField(
