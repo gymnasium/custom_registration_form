@@ -99,7 +99,7 @@ class ExtraInfo(models.Model):
         verbose_name="Select Nearest Aquent Office",
     )
 
-    receive_job_offers = models.BooleanField(
+    subscribe_jobs = models.BooleanField(
         blank=True,
         default=False,
         editable=True,
@@ -107,7 +107,7 @@ class ExtraInfo(models.Model):
     ),
 
     def __str__(self):
-        return f"{self.user.username} | Market: {self.market} | Job Offers: {self.receive_job_offers}"
+        return f"{self.user.username} | Market: {self.market} | Job Offers: {self.subscribe_jobs}"
     
     class Meta:
         app_label = "custom_reg_form"
